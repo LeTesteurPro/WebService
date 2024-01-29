@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajouter une Équipe</title>
+</head>
+<body>
+
+<h2>Ajouter une Équipe</h2>
+
+<form action="#" th:action="@{/statistique/ajouter}" th:object="${newObjet}" method="post">
+    <label>Id du joueur: <input type="text" th:field="*{idjoueur}" /></label><br/>
+    <label>Id du match: <input type="text" th:field="*{idmatch}" /></label><br/>
+    <label>Intercetion: <input type="text" th:field="*{interception}" /></label><br/>
+    <label>Rebond offencif: <input type="text" th:field="*{rebondoff}" /></label><br/>
+    <label>Rebond defencif: <input type="text" th:field="*{rebonddef}" /></label><br/>
+    <input type="submit" value="Ajouter"/>
+</form>
+
+</body>
+</html>
